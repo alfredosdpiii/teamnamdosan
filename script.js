@@ -36,12 +36,12 @@ async function start() {
 }
 
 function loadLabeledImages() {
-  const labels = ['Hindi Pinili', 'Pakyu mga team Ji-Pyeong']
+  const labels = ['Bobong Dal-Mi', 'Hindi Pinili', 'Pakyu mga team Ji-Pyeong']
   return Promise.all(
     labels.map(async label => {
       const descriptions = []
       for (let i = 1; i <= 4; i++) {
-        const img = await faceapi.fetchImage(`https://raw.githubusercontent.com/alfredosdpiii/teamnamdosan/master/labeled_images/${label}/${i}.jpg`)
+        const img = await faceapi.fetchImage(`https://raw.githubusercontent.com/alfredosdpiii/teamnamdosan/master/labeled_images/${label}/$1.jpg`)
         const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
         descriptions.push(detections.descriptor)
       }
