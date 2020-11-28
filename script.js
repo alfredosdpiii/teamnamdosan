@@ -36,7 +36,7 @@ async function start() {
 }
 
 function loadLabeledImages() {
-  const labels = ['Bobong Dal-Mi', 'Hindi Pinili', 'Pakyu mga team Ji-Pyeong']
+  const labels = ['Hindi Pinili', 'Pakyu mga team Ji-Pyeong']
   return Promise.all(
     labels.map(async label => {
       const descriptions = []
